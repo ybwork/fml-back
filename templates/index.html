@@ -1,5 +1,197 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-	<p>Home</p>
+        <!-- Showcase Holder -->
+        <div id="showcase-holder"> 
+            <div id="showcase-slider">
+
+                <!-- Section Slide -->
+                <div class="section light-content">
+                    <div class="img-mask">
+                        <a class="ajax-link-project" data-type="page-transition" href="project01.html">
+                            <div class="img-perspective">
+                                <div class="img-split">
+                                    <div class="section-image" data-src="{{ url_for('static', filename='images/01hero.jpg') }}"></div>
+                                    <!-- <div class="section-image" data-src="images/a.jpg"></div> -->
+                                    <div class="section-image-mirror"></div>                        
+                                </div>
+                            </div>
+                         </a>
+                    </div>                     
+                    <div class="section-shadow"></div>
+                    <div class="section-caption-outer">
+                        <div class="section-caption-inner">
+                            <h2 class="section-title sa-one">Анастасия Худикова</h2>
+                            <!-- <p class="section-subtitle sa-two">Photography</p> -->
+                        </div>
+                    </div>
+                </div>
+                <!--/Section Slide -->
+
+                <!-- Section -->
+                <div class="section">
+                        <!-- Row -->
+                    <div class="vc_row small row_padding_top row_padding_bottom text-align-center">
+                        <div class="container">                        
+                            <h3 class="has-animation" data-delay="100">
+                                What people are saying about us
+                            </h3>
+
+                            <hr>
+                            
+                            <div class="text-carousel has-animation" data-delay="10">
+                                <div class="text-carousel-item">
+                                    <p>"These guys are amazing. I really like this theme and the customer support is just amazing. <br class="destroy">Thank you for all of your support."</p>                                    <div class="user-review">Sultan0254 - Themeforest</div>
+                                </div>
+                                
+                                <div class="text-carousel-item">
+                                    <p>"The design is beautiful, elegant and minimal. The customer service was amazing, asked for a <br class="destroy">404 page and they provided me one free of charge. "</p>
+                                    <div class="user-review">Rmbettencourt - Themeforest</div>              
+                                </div>
+                                
+                                <div class="text-carousel-item"> 
+                                    <p>"Maestro is one of my favorite theme and I bought quite a few from ThemeForest"</p>
+                                    <div class="user-review">Oratorio - Themeforest</div>             
+                                </div>               
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Row -->
+                </div>
+                <!-- Section -->
+
+                <!-- Section -->
+                <div class="section">
+                    <!-- Row -->
+                    <div class="vc_row row_padding_top row_padding_bottom text-align-center">
+                        <div class="container">
+                            <h3 class="has-animation" data-delay="100">Just some of the reasons</h3>
+                            <hr><hr>
+<!--                             <div class="one_half has-animation" data-delay="150">
+                                <div class="clapat-icon">
+                                    <i class="fa fa-life-ring" aria-hidden="true"></i>
+                                    <h6>Friendly Support</h6>
+                                    <p>We will be with you every step of the way. It’s a promise!</p>
+                                </div>
+                            </div> -->
+                            <div class="one_half has-animation" data-delay="200">
+                                <div class="clapat-icon">
+                                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                                    <h6>Need Custom Work?</h6>
+                                    <p>Send us a message with everything you need to customize.</p>
+                                </div>
+                            </div>
+                            <div class="one_half has-animation" data-delay="200">
+                                <div class="clapat-icon">
+                                    <i class="fa fa-repeat" aria-hidden="true"></i>
+                                    <h6>Need Custom Work?</h6>
+                                    <p>Send us a message with everything you need to customize.</p>
+                                </div>
+                            </div>
+<!--                             <div class="one_half has-animation" data-delay="200">
+                                <div class="clapat-icon">
+                                    <i class="fa fa-repeat" aria-hidden="true"></i>
+                                    <h6>Money Back Guarantee</h6>
+                                    <p>If you don’t like our theme, we will refund all your money back.</p>
+                                </div>
+                            </div> -->
+                            <hr>
+<!--                             <div class="one_half has-animation" data-delay="200">
+                                <div class="clapat-icon">
+                                    <i class="fa fa-trophy" aria-hidden="true"></i>
+                                    <h6>Premium Quality</h6>
+                                    <p>All Themes are made by Envato Elite Author - ClaPat</p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!--/Row -->
+
+                </div>
+                <!-- Section -->
+
+                <!-- Section -->
+                <div class="section">
+                    <!-- Row -->
+                    <div class="vc_row small text-align-center contact_us has-animation"  data-delay="100">
+                        
+                        <div class="container">
+                            
+                            <h4>Оставить заявку</h4>
+                            <!-- <p>For projects or anything else don’t hesitate to get in touch with us. </p> -->
+                           
+                            
+                            <!-- Contact Formular -->
+                            <div id="contact-formular">
+                            
+                                <div id="message"></div>
+                            
+                                <form method="post" action="contact.php" name="contactform" id="contactform">                             
+                                    <div class="name-box">        
+                                        <input name="name" type="text" id="name" size="30"  onfocus="if(this.value == 'Full Name') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Full Name'; }" value="Имя"><label class="input_label"></label>
+                                    </div>                                                        
+                                    <div class="email-box">
+                                        <input name="email" type="text" id="email" size="30" onfocus="if(this.value == 'E-mail') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'E-mail'; }" value="Телефон" ><label class="input_label"></label>
+                                    </div>                            
+                                    <div class="message-box">
+                                        <textarea name="comments" cols="40" rows="4" id="comments" onfocus="if(this.value == 'Your Message') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Your Message'; }" >Сообщение</textarea><label class="input_label slow"></label>
+                                    </div>                             
+                                     <div class="submit-box">             
+                                        <input type="submit" class="send_message clapat-button outline" id="submit" value="Отправить"/> 
+                                    </div>
+                                </form>                        
+                                                        
+                            </div>
+                            <!--/Contact Formular -->
+                            
+                            <hr><hr>
+                            
+                        </div>
+                    </div>
+                    <!--/Row -->
+                </div>
+                <!-- Section -->
+
+                <div class="section">
+                    <!-- Row -->
+                    <div class="vc_row small text-align-center row_padding_top row_padding_bottom small has-animation"  data-delay="0">
+                    
+                        <div class="container">
+                            
+                            <div class="one_third">
+                                <div class="clapat-icon">
+                                    <i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i>
+                                </div>
+                            
+                                <h6><a href="mailto:office@wizzard.com" class="link"><span>hudikova@gmail.com</span></a></h6>
+                                <p>Почта</p>                        
+                            </div>
+                            
+                            <div class="one_third">
+                                <div class="clapat-icon">
+                                    <i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                                </div>
+                            
+                                <h6>hudikova91</h6>
+                                <p>Skype</p>                        
+                            </div>
+                            
+                            <div class=" one_third last">
+                                <div class="clapat-icon">
+                                    <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                                </div>
+                            
+                                <h6>8-918-574-00-08</h6>
+                                <p>Телефон</p>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <!--/Row -->
+                </div>
+                <!-- Section -->
+            </div>
+        </div>    
+        <!-- Showcase Holder -->
 {% endblock %}

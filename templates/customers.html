@@ -1,5 +1,220 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-	<p>Customers</p>
+        <!-- Portfolio Filters -->
+        <div class="page-action-overlay">
+            <div class="outer">
+                <div class="inner">                	
+                    <div class="close-page-action"></div>
+                    <p class="page-action-text">Projects Categories:</p>
+                    <ul id="filters" class="page-action-content">
+                        <li><a id="all" href="#" data-filter="*" class="active">All</a><span>09</span></li>
+                        <li><a href="#" data-filter=".photo">Photography</a><span>03</span></li>                        
+                        <li><a href="#" data-filter=".branding">Branding</a><span>03</span></li>                        
+                        <li><a href="#" data-filter=".design">Design</a><span>03</span></li>
+                    </ul>                   
+                </div>
+            </div>
+        </div>
+        <!--/Portfolio Filters -->
+        
+        
+        <!-- Main -->
+        <div id="main">
+        
+        	
+            <!-- Hero Section -->
+            <div id="hero">
+                <div id="hero-styles" class="opacity-onscroll">
+                    <div id="hero-caption">
+                        <div class="inner">
+                            <!-- <h1 class="hero-title">Our Portfolio</h1> -->
+                            <!-- <p class="hero-subtitle">Made by ClaPat Studio</p>                         -->
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div id="hero-height" class="hidden"></div>
+            <!--/Hero Section -->
+            
+            
+            <!-- Main Content -->
+            <div id="main-content">
+                           
+                
+                <!-- Portfolio Wrap -->
+                <div id="portfolio-wrap" class="visible-text">                
+                    <!-- Portfolio Columns -->
+                    <div id="portfolio" data-col="3">
+                        
+                        <div class="item photo">                        	                    	
+                            <div class="item-content">
+                            	<div class="item-shadow"></div>
+                                <a href="project01.html" class="ajax-link" data-type="page-transition">                                    
+                                    <div class="item-image" data-src="images/project01.jpg" alt="Wizzard Portfolio Template by ClaPat"></div>
+                                    <div class="item-gradient"></div> 
+                                </a>
+                                <div class="item-caption">                                
+                                    <h2 class="item-title">Tina Turner</h2>
+                                    <h3 class="item-sub-mask">
+                                        <!-- <span class="item-cat">Photography</span> -->
+                                        <!-- <span class="item-case">View Details</span> -->
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item branding">                        	                    	
+                            <div class="item-content">
+                            	<div class="item-tilt">
+                                    <div class="item-shadow is-5o"></div>
+                                    <a href="project02.html" class="ajax-link" data-type="page-transition">                                    
+                                        <div class="item-image" data-src="images/project02.jpg" alt="Wizzard Portfolio Template by ClaPat"></div>
+                                        <div class="item-gradient"></div>  
+                                    </a>
+                                    <div class="item-caption">                                
+                                        <h2 class="item-title">Ekko Labs</h2>
+                                        <h3 class="item-sub-mask">
+                                            <!-- <span class="item-cat">Branding</span> -->
+                                            <!-- <span class="item-case">View Details</span> -->
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item photo">                   	
+                            <div class="item-content">
+                            	<div class="item-shadow"></div>
+                                <a href="project03.html" class="ajax-link" data-type="page-transition">                                    
+                                    <div class="item-image" data-src="images/project03.jpg" alt="Wizzard Portfolio Template by ClaPat"></div>
+                                    <div class="item-gradient"></div>
+                                </a>
+                                <div class="item-caption">                                
+                                    <h2 class="item-title">Sombre Forest</h2>
+                                    <h3 class="item-sub-mask">
+                                        <!-- <span class="item-cat">Photography</span> -->
+                                        <!-- <span class="item-case">View Details</span> -->
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item design">                        	                    	
+                            <div class="item-content">
+                            	<div class="item-shadow"></div>
+                                <a href="project04.html" class="ajax-link" data-type="page-transition">                                    
+                                    <div class="item-image" data-src="images/project04.jpg" alt="Wizzard Portfolio Template by ClaPat"></div>
+                                    <div class="item-gradient"></div> 
+                                </a>
+                                <div class="item-caption">                                
+                                    <h2 class="item-title">Ex Machina</h2>
+                                    <h3 class="item-sub-mask">
+                                        <!-- <span class="item-cat">Design</span> -->
+                                        <!-- <span class="item-case">View Details</span> -->
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item branding">                        	                    	
+                            <div class="item-content">
+                            	<div class="item-tilt">
+                                    <div class="item-shadow"></div>
+                                    <a href="project05.html" class="ajax-link" data-type="page-transition">                                    
+                                        <div class="item-image" data-src="images/project05.jpg" alt="Wizzard Portfolio Template by ClaPat"></div>
+                                        <div class="item-gradient"></div>  
+                                    </a>
+                                    <div class="item-caption">                                
+                                        <h2 class="item-title">Opulence</h2>
+                                        <h3 class="item-sub-mask">
+                                            <!-- <span class="item-cat">Branding</span> -->
+                                            <!-- <span class="item-case">View Details</span> -->
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item design">                   	
+                            <div class="item-content">
+                            	<div class="item-shadow"></div>
+                                <a href="project06.html" class="ajax-link" data-type="page-transition">                                    
+                                    <div class="item-image" data-src="images/project06.jpg" alt="Wizzard Portfolio Template by ClaPat"></div>
+                                    <div class="item-gradient"></div>
+                                </a>
+                                <div class="item-caption">                                
+                                    <h2 class="item-title">Sport Black</h2>
+                                    <h3 class="item-sub-mask">
+                                        <!-- <span class="item-cat">Design</span> -->
+                                        <!-- <span class="item-case">View Details</span> -->
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item photo">                        	                    	
+                            <div class="item-content">
+                            	<div class="item-shadow"></div>
+                                <a href="project07.html" class="ajax-link" data-type="page-transition">                                    
+                                    <div class="item-image" data-src="images/project07.jpg" alt="Wizzard Portfolio Template by ClaPat"></div>
+                                    <div class="item-gradient"></div> 
+                                </a>
+                                <div class="item-caption">                                
+                                    <h2 class="item-title">Guest House</h2>
+                                    <h3 class="item-sub-mask">
+                                        <!-- <span class="item-cat">Photography</span> -->
+                                        <!-- <span class="item-case">View Details</span> -->
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item design">                        	                    	
+                            <div class="item-content">
+                            	<div class="item-tilt">
+                                    <div class="item-shadow"></div>
+                                    <a href="project08.html" class="ajax-link" data-type="page-transition">                                    
+                                        <div class="item-image" data-src="images/project08.jpg" alt="Wizzard Portfolio Template by ClaPat"></div>
+                                        <div class="item-gradient"></div>  
+                                    </a>
+                                    <div class="item-caption">                                
+                                        <h2 class="item-title">Cairs Root</h2>
+                                        <h3 class="item-sub-mask">
+                                            <!-- <span class="item-cat">Design</span> -->
+                                            <!-- <span class="item-case">View Details</span> -->
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item design">                   	
+                            <div class="item-content">
+                            	<div class="item-shadow is-7o"></div>
+                                <a href="project09.html" class="ajax-link" data-type="page-transition">                                    
+                                    <div class="item-image" data-src="images/project09.jpg" alt="Wizzard Portfolio Template by ClaPat"></div>
+                                    <div class="item-gradient"></div>
+                                </a>
+                                <div class="item-caption">                                
+                                    <h2 class="item-title">Iceland</h2>
+                                    <h3 class="item-sub-mask">
+                                        <!-- <span class="item-cat">Photography</span> -->
+                                        <!-- <span class="item-case">View Details</span> -->
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                               
+                    
+                    </div>
+                    <!--/Portfolio -->                
+                </div>
+                <!--/Portfolio Wrap -->
+            
+                        
+            </div>
+            <!--/Main Content --> 
+        </div>
+        <!--/Main -->  
 {% endblock %}

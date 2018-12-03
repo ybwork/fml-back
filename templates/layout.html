@@ -1,11 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Test</title>
+    <title>Wizzard - Creative Ajax Portfolio Showcase Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Download the best Creative Portfolio HTML Template in 2018"/>
+    <meta name="author" content="ClaPat Studio">
+    <meta charset="UTF-8"/>    
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet"/>
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:500,600" rel="stylesheet">
 </head>
-<body>
-	<p>layout</p>
+    
+<body class="hidden">
+
+	<main>
+    
+    <div class="preloader-wrap">
+    	<div class="outer">
+        	<div class="inner">
+      			<div class="percentage" id="precent"></div>
+                <!-- <div class="preloader-text">We are a digital and creative agency <span>Wizzard Studio</span></div>       -->
+      		</div>
+      	</div>
+    </div>
+    
+	<div class="cd-index cd-main-content">
+	
+	<!-- Page Content -->
+	<div id="page-content" class="" data-bgcolor="#eee">
+        
+        <!-- Background Lines -->
+        <div class="bg-lines hidden">    
+            <svg>
+    			<line x1="20%" y1="100%" x2="80%" y2="0"/>
+				<line x1="80%" y1="100%" x2="20%" y2="0"/>
+    		</svg>  
+        </div>
+        <!--/Background Lines -->
+        
+        
+    
+        <!-- Header -->
+        <header class="scroll-hide">
+            <div id="header-container">
+        
+            <!-- Logo -->
+            <div id="logo">
+<!--                 <a class="ajax-link" data-type="page-transition" href="index.html">
+                    <img class="black-logo" src="images/logo.png" alt="ClaPat Logo">
+                    <img class="white-logo" src="images/logo-white.png" alt="ClaPat Logo">
+                </a> -->
+                <!-- <div id="burger-circle"></div> -->
+                <!-- <span class="new-logo"></span> -->
+            </div>
+            <!--/Logo -->            
+            
+            <!-- <div class="menu-info">Анастасия Худикова</div> -->
+            
+            <!-- Menu Burger -->
+            <div id="burger-wrapper">
+            	<div id="burger-circle"></div>
+                <div id="menu-burger">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <!--/Menu Burger -->
+        
+            </div>
+        </header>
+        <!--/Header -->
+        
+        
+        <!-- Menu Overlay -->
+        <div id="menu-overlay">
+            
+            <div id="close-menu"></div>  
+            
+            <div class="outer">
+                <div class="inner">
+                    
+                    <nav>                    
+                        <ul class="main-menu">
+                            <li class="mp active"><a class="ajax-link menu-link" href="{{ url_for('index') }}"><span></span>Главная</a></li>
+<!--                             <li class="mp has-sub"><a href="#"><span></span>Portfolio</a>
+                                <ul>
+                                    <li><a class="ajax-link" data-type="page-transition" href="portfolio.html">Visible Text</a></li>
+                                    <li><a class="ajax-link" data-type="page-transition" href="portfolio1.html">Black Overlay</a></li>
+                                </ul>
+                            </li> -->
+                            <li class="mp"><a class="ajax-link menu-link" href="{{ url_for('customers') }}"><span></span>Заказчики</a></li>
+                            <!-- <li class="mp"><a class="ajax-link menu-link" data-type="page-transition" href=""><span></span>Инструменты</a></li> -->
+                        </ul>                
+                    </nav>
+                    
+                    
+                </div>
+            </div>
+        
+        </div>
+        <!-- Menu Overlay -->>
 
 	{% block content %} {% endblock %}
+
+        <!-- Footer -->
+        <footer class="hidden after-slider">        	
+            <div id="footer-container">
+            
+                <div id="page-action-holder-left" data-tooltip="Prev" data-placement="right">
+                    <div id="prev-slide">                                                    
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="20px" y="20px" width="40px" height="40px" viewBox="0 0 80 80" xml:space="preserve">
+                            <circle class="circle-action is-inner" cx="40" cy="40" r="36" />
+                            <circle class="circle-action is-outer" cx="40" cy="40" r="36" />
+                        </svg>
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        <div class="circle-line"></div>
+                    </div>                        	
+                </div>
+                
+                <div id="page-action-holder-right" data-tooltip="Next" data-placement="left">
+                    <div id="next-slide">                                                    
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="10px" y="10px" width="40px" height="40px" viewBox="0 0 80 80" xml:space="preserve">
+                            <circle class="circle-action is-inner" cx="40" cy="40" r="36" />
+                            <circle class="circle-action is-outer" cx="40" cy="40" r="36" />
+                        </svg>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        <div class="circle-line"></div>
+                    </div>
+                </div>
+                
+                <ul class="socials-text">
+                    <li><a href="https://www.facebook.com/clapat.ro" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.twitter.com/clapatdesign" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.dribbble.com/clapat" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a href="https://www.behance.net/clapat" target="_blank"><i class="fa fa-behance"></i></a></li>
+                </ul>            
+                
+                <!-- <p class="copyright">2018 © <a target="_blank" href="https://www.clapat.com/themes/wizzard/">Wizzard Theme</a>. Design by <a target="_blank" href="https://www.clapat.com/">Clapat</a>.</p>  -->
+            
+        	</div>
+        </footer>
+        <!--/Footer -->
+ 
+ 
+	</div>    
+	<!--/Page Content -->
+    
+    <div id="rotate-device"></div>
+    
+    
+    </div>
+</main>
+ 
+    <div class="cd-cover-layer"></div>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
+
 </html>
