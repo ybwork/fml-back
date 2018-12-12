@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form id="bids" method="POST" action="{{ url_for('ajax') }}">
+	    {{ form.csrf_token }}
+	    {{ form.name(size=20, required=False) }}
+	    {{ form.phone(size=20, required=False) }}
+	    {{ form.message(size=20, required=False) }}
+	    <button type="submit">Go</button>
+	</form>
+
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	<!-- <script src="{{ url_for('static', filename='js/plugins.js') }}"></script> -->
+	<!-- <script src="{{ url_for('static', filename='js/scripts.js') }}"></script> -->
+	<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>

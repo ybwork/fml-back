@@ -1151,20 +1151,23 @@ Function Sliders
 Function Contact Formular
 ---------------------------------------------------*/	
 		
-	function ContactForm() {	
-	
-		if( jQuery('#contact-formular').length > 0 ){
-			$('#contactform').submit(function(){
+	function ContactForm() {
+		if(jQuery('#contact-formular').length > 0) {
+			$('#contactform').submit(function() {
 				var action = $(this).attr('action');
+
 				$("#message").slideUp(750,function() {
 					$('#message').hide();
-					$('#submit').attr('disabled','disabled');		
+
+					$('#submit').attr('disabled','disabled');
+
 					$.post(action, {
 						name: $('#name').val(),
 						email: $('#email').val(),
 						comments: $('#comments').val()
 					},
-					function(data){
+
+					function(data) {
 						document.getElementById('message').innerHTML = data;
 						$('#message').slideDown('slow');
 						$('#contactform img.loader').fadeOut('slow',function(){$(this).remove()});
@@ -1176,7 +1179,6 @@ Function Contact Formular
 				return false;		
 			});		
 		}
-
 	}//End ContactForm		
 	
 	

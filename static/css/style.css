@@ -882,6 +882,7 @@ Primary use:	Showcase Portfolio
 		left: 0;
 		visibility:visible;
 		opacity:0;
+		font-size: 19px;
 	}
 	
 	.transition .menu-info {

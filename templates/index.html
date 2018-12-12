@@ -21,7 +21,8 @@
                     <div class="section-shadow"></div>
                     <div class="section-caption-outer">
                         <div class="section-caption-inner">
-                            <h2 class="section-title sa-one">Анастасия Худикова</h2>
+                            <h2 class="section-title sa-one"></h2>
+                            <!-- <h2 class="section-title sa-one">Анастасия Худикова</h2> -->
                             <!-- <p class="section-subtitle sa-two">Photography</p> -->
                         </div>
                     </div>
@@ -126,12 +127,12 @@
                             
                                 <div id="message"></div>
                             
-                                <form method="post" action="contact.php" name="contactform" id="contactform">                             
+                                <form method="GET" action="{{ url_for('bids') }}" name="contactform" id="contactform">                             
                                     <div class="name-box">        
-                                        <input name="name" type="text" id="name" size="30"  onfocus="if(this.value == 'Full Name') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Full Name'; }" value="Имя"><label class="input_label"></label>
+                                        <input name="name" type="text" id="name" size="30" onfocus="if(this.value == 'Full Name') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Full Name'; }" value="Имя"><label class="input_label"></label>
                                     </div>                                                        
                                     <div class="email-box">
-                                        <input name="email" type="text" id="email" size="30" onfocus="if(this.value == 'E-mail') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'E-mail'; }" value="Телефон" ><label class="input_label"></label>
+                                        <input name="email" type="text" id="email" size="30" onfocus="if(this.value == 'E-mail') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'E-mail'; }" value="Телефон"><label class="input_label"></label>
                                     </div>                            
                                     <div class="message-box">
                                         <textarea name="comments" cols="40" rows="4" id="comments" onfocus="if(this.value == 'Your Message') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Your Message'; }" >Сообщение</textarea><label class="input_label slow"></label>
