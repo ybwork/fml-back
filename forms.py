@@ -1,10 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, IntegerField, TextAreaField
-from wtforms.validators import DataRequired, NumberRange, Length
-
-
-def is_int(form, field):
-    print(field.data)
+from wtforms import StringField, TextAreaField
+from wtforms.validators import DataRequired, Length
 
 
 class BidForm(FlaskForm):
@@ -12,13 +8,14 @@ class BidForm(FlaskForm):
         'name',
         validators=[
             DataRequired('Заполните имя'),
-            Length(max=100, message='Поле имя не может быть больше ста букв')
+            Length(max=100, message='Превышен лимит символов')
         ]
     )
-    phone = IntegerField(
+    phone = StringField(
         'phone',
         validators=[
             DataRequired('Заполните телефон'),
+            Length(max=20, message='Превышен лимит символов')
         ],
 
     )
