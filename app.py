@@ -4,21 +4,20 @@ import logging
 from flask import Flask, render_template, request, jsonify
 from flask.logging import default_handler
 from flask_mail import Mail
-import os
 
 import utils
+from config import DevelopmentConfig
 from forms import BidForm
 
 app = Flask(__name__)
+
+app.config.from_object(DevelopmentConfig)
 
 # Logging
 app.logger.removeHandler(default_handler)
 file_handler = RotatingFileHandler('app.log', maxBytes=1000000, backupCount=1)
 file_handler.setLevel(logging.ERROR)
 app.logger.addHandler(file_handler)
-
-# Secret key for csrf token
-app.secret_key = os.urandom(16)
 
 # Email
 mail = Mail(app)
