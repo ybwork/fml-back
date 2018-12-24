@@ -1,26 +1,22 @@
-from logging.handlers import RotatingFileHandler
-import logging
-
 from flask import Flask, render_template, request, jsonify
-from flask.logging import default_handler
-from flask_mail import Mail
 
 import utils
 from config import DevelopmentConfig
 from forms import BidForm
 
-app = Flask(__name__)
 
+class App():
+    __app = None
+
+    @staticmethod
+    def get_app():
+        if App.__app is None:
+            App.__app = Flask(__name__)
+        return App.__app
+
+
+app = App.get_app()
 app.config.from_object(DevelopmentConfig)
-
-# Logging
-app.logger.removeHandler(default_handler)
-file_handler = RotatingFileHandler('app.log', maxBytes=1000000, backupCount=1)
-file_handler.setLevel(logging.ERROR)
-app.logger.addHandler(file_handler)
-
-# Email
-mail = Mail(app)
 
 
 @app.route('/')
@@ -50,12 +46,16 @@ def ajax():
 
     if form.validate_on_submit():
         # utils.send_mail()
-        return jsonify({'message': 'Ваша заявка успешно отправлена'})
+        return send_json_response({'message': 'Ваша заявка успешно отправлена'}, 200)
 
-    app.logger.error('fuck')
+    utils.write_log('eee')
 
-    response = jsonify(form.errors)
-    response.status_code = 400
+    return send_json_response(form.errors, 400)
+
+
+def send_json_response(message, status_code):
+    response = jsonify(message)
+    response.status_code = status_code
     return response
 
 
