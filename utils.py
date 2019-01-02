@@ -3,7 +3,7 @@ from logging.handlers import RotatingFileHandler
 import logging
 
 from flask.logging import default_handler
-from flask_mail import Mail
+from flask_mail import Mail, Message
 
 from app import App
 
@@ -19,5 +19,10 @@ def write_log(message):
 
 
 def send_mail():
-    mail = Mail(app)
-    return 'send_mail'
+    # mail = Mail()
+    # mail.init_app(app)
+    # msg = Message('Hello', recipients=['to@example.com'])
+    # msg.body = 'testing'
+    # msg.html = '<b>testing</b>'
+    # return mail.send(msg)
+    pass
