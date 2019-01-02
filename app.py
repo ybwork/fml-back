@@ -1,21 +1,10 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
+from flask.json import jsonify
 
 import utils
 from config import DevelopmentConfig
 from forms import BidForm
 
-
-# class App():
-#     __app = None
-#
-#     @staticmethod
-#     def get_app():
-#         if App.__app is None:
-#             App.__app = Flask(__name__)
-#         return App.__app
-
-
-# app = App.get_app()
 app = Flask(__name__)
 app.config.from_object(DevelopmentConfig)
 
