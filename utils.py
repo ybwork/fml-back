@@ -5,9 +5,9 @@ import logging
 from flask.logging import default_handler
 from flask_mail import Mail, Message
 
-from app import App
+from app import app
 
-app = App.get_app()
+# app = App.get_app()
 
 
 def write_log(message):
